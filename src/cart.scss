@@ -1,0 +1,118 @@
+.cart {
+    font-weight: 300;
+    margin-left: 116px;
+    font-size: 15px;
+    font-family: 'Rubik';
+    min-height: 700px;
+
+    .clearSelected {
+        color: #FF6633;
+    }
+
+    h2 {
+        margin-top: 72px;
+        font-weight: 700;
+        font-size: 64px;
+        margin-bottom: 68px;
+    }
+
+    .incartItem {
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        width: 876px;
+        height: 72px;
+        margin-top: 24px;
+
+        p {
+            position: absolute;
+            right: 10px;
+            top: -3px;
+            font-size: 15px;
+
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        li {
+            font-size: 12px;
+        }
+
+        img {
+            height: 100%;
+            width: 72px;
+            border-radius: 4px;
+        }
+    }
+
+    .countBtn {
+        position: absolute;
+        background: #70C05B;
+        border-radius: 4px;
+        color: white;
+        left: 640px;
+        top: 15px;
+        width: 100px;
+        height: 40px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        span {
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+
+        .minus-svg {
+            width: 15px;
+            height: 3px;
+        }
+    }
+
+    .toggle-wrapper {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.totalyBlock {
+    background-color: white;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: absolute;
+    left: 1175px;
+    top: 530px;
+    width: 272px;
+    height: 430px;
+    .promotionBlock {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .mathBlock{
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    span {
+        color: grayscale($color: #8F8F8F)
+    }
+    .btn {
+        background-color: #FF6633;
+        margin-top: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        border:0;
+        color: white;
+        align-self: center;
+        width: 250px;
+        height: 60px;
+        margin-top: 100px
+    }
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,9 +7,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #87CEFA;
 }
 
 .wrapper {
+  border-radius: 14px;
   background-color: rgba(251, 248, 236, 1);
   max-width: 1440px;
   margin: 0 auto;
@@ -16,6 +19,7 @@ body {
 }
 
 header {
+  border-radius: 14px;
   background-color: #FFFFFF;
   max-height: 72px;
 
@@ -45,7 +49,7 @@ header {
   }
 
   .headerButtons {
-    margin-left: 500px;
+    margin-left: 300px;
 
     li {
       padding-right: 18px;
@@ -65,23 +69,32 @@ header {
 .content {
   margin-left: 116px;
   margin-top: 134px;
+  
+  .itemBlock {
+    width: 1300px;
+    flex-wrap: wrap;
+  }
+
   h3 {
     font-size: 36px;
     font-weight: 700;
     line-height: 54px;
     text-align: left;
   }
+
   .item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
+    transition: box-shadow 0.2s ease-in-out, translate 0.2s ease-in-out;
+
     margin-right: 40px;
+    margin-bottom: 30px;
+
     width: 272px;
     height: 349px;
     background: #FFFFFF;
-    /* Default/XS */
-
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 
@@ -91,6 +104,12 @@ header {
       margin-left: 232px;
       z-index: 2;
     }
+    
+    .rating {
+      width: 210px;
+      height: 16px;
+    }
+
     img {
       height: 160px;
       width: 272px;
@@ -104,7 +123,17 @@ header {
       line-height: 150%;
       color: #BFBFBF;
     }
-
+    .disabled-button {
+      background-color: #FF6633;
+      margin-top: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      border:0;
+      color: white;
+      align-self: center;
+      width: 256px;
+      height: 40px;
+    }
     .button {
       margin-top: 8px;
       cursor: pointer;
@@ -124,6 +153,38 @@ header {
   }
 }
 
+.item:hover {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.search {
+  // position: absolute;
+  width: 375px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #70C05B;
+  
+  border-radius: 4px;
+  img {
+    margin-left: 325px;
+  }
+
+  input {
+    font-family: 'Rubik';
+    border: 0;
+    width: 300px;
+    position: absolute;
+    margin-left: 15px;
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 15px;
+    align-self: center;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -133,6 +194,7 @@ code {
   margin-top: 8px;
   font-family: 'Rubik', sans-serif;
 }
+
 .modPrice {
   padding-right: 130px;
   margin-left: 10px;
@@ -144,10 +206,12 @@ code {
 
 .classicPrice {
   margin-left: 10px;
+
   p {
     font-weight: 300;
   }
 }
+
 // header {
 //   svg {
 
