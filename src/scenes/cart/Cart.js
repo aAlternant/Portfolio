@@ -1,4 +1,8 @@
-{/* <div className="cart">
+import './cart.scss'
+
+function Cart() {
+  return (
+      <div className="cart" >
         <h2>Корзина</h2>
         <div className="d-flex align-center">
           <img src="/img/checkbox.svg" alt="Checkbox" />
@@ -70,4 +74,8 @@
           <button className="btn">Оформить заказ</button>
         </div>
 
-      </div> */}
+      </div>
+  )
+}
+
+export default Cart

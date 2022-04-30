@@ -19,6 +19,7 @@ body {
 }
 
 header {
+  height: 125px;
   border-radius: 14px;
   background-color: #FFFFFF;
   max-height: 72px;
@@ -38,7 +39,7 @@ header {
     display: flex;
     align-items: center;
     padding-left: 30px;
-
+    cursor: pointer;
     svg {
       margin-right: 5px;
     }
@@ -52,6 +53,7 @@ header {
     margin-left: 300px;
 
     li {
+      cursor: pointer;
       padding-right: 18px;
 
       svg {
@@ -69,7 +71,7 @@ header {
 .content {
   margin-left: 116px;
   margin-top: 134px;
-  
+
   .itemBlock {
     width: 1300px;
     flex-wrap: wrap;
@@ -80,72 +82,6 @@ header {
     font-weight: 700;
     line-height: 54px;
     text-align: left;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    transition: box-shadow 0.2s ease-in-out, translate 0.2s ease-in-out;
-
-    margin-right: 40px;
-    margin-bottom: 30px;
-
-    width: 272px;
-    height: 349px;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-
-    .markedSvg {
-      position: absolute;
-      margin-top: 8px;
-      margin-left: 232px;
-      z-index: 2;
-    }
-    
-    .rating {
-      width: 210px;
-      height: 16px;
-    }
-
-    img {
-      height: 160px;
-      width: 272px;
-    }
-
-    span {
-      font-family: 'Rubik';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 150%;
-      color: #BFBFBF;
-    }
-    .disabled-button {
-      background-color: #FF6633;
-      margin-top: 8px;
-      cursor: pointer;
-      border-radius: 4px;
-      border:0;
-      color: white;
-      align-self: center;
-      width: 256px;
-      height: 40px;
-    }
-    .button {
-      margin-top: 8px;
-      cursor: pointer;
-      border: 1px solid #70C05B;
-      box-sizing: border-box;
-      border-radius: 4px;
-      background-color: white;
-      color: #70C05B;
-      align-self: center;
-      width: 256px;
-      height: 40px;
-    }
   }
 
   p {
@@ -166,8 +102,9 @@ header {
   flex-direction: row;
   align-items: center;
   border: 1px solid #70C05B;
-  
+
   border-radius: 4px;
+
   img {
     margin-left: 325px;
   }
@@ -201,7 +138,9 @@ code {
 }
 
 .starsBlock {
-  margin-left: 30px
+  position: absolute;
+  margin-top: 275px;
+  margin-left: 10px
 }
 
 .classicPrice {
@@ -212,8 +151,9 @@ code {
   }
 }
 
-// header {
-//   svg {
-
-//   }
-// }
+.logo {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 50px;
+  height: 50px;
+}
