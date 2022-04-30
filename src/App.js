@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import React, { useState } from 'react'
-import Main from "./scenes/cart/main/Main";
+import Main from "./scenes/main/Main";
 import Cart from "./scenes/cart/Cart";
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div className="wrapper clear mt-40 mb-40">
-      <Header onClickCart  = {() => setCartStatus(true)} onClickLogo = {() => setCartStatus(false)}/>
+      <Header onClickCart={() => setCartStatus(true)} onClickLogo={() => setCartStatus(false)} />
       <img src="/img/banner.svg" alt="Тут был баннер"></img>
-      {cartOpened ?  <Cart /> : <Main />}
+      {cartOpened ? <Cart /> : <Main key="cart" />}
 
     </div>
   )

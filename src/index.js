@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';

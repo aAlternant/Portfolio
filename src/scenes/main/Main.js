@@ -1,21 +1,20 @@
-import Item from "../../../components/item/Item"
-import React, { useState, useEffect } from 'react'
+import Item from "../../components/item/Item"
+import { useState, useEffect } from 'react'
 
 const backUrl = "https://626d63f2e58c6fabe2d4dc9a.mockapi.io/items"
 
 function Main() {
 
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // async function fetchItems() {
-    //   const response = await fetch(backUrl);
-    //   const data = await response.json();
-    //   console.log("EffectUsed")
-    //   setItems(data)
-    // }
-    // fetchItems()
-    console.log("123")
+    async function fetchItems() {
+      const response = await fetch(backUrl);
+      const data = await response.json();
+      console.log("EffectUsed")
+      setItems(data)
+    }
+    fetchItems()
   }, []);
 
   return (
@@ -25,9 +24,10 @@ function Main() {
         {
           items.map((item) => (
             <Item
+              key = {item.title}
               title={item.title}
               price={+item.price}
-              discount={+item.discound}
+              discount={+item.discount}
               img={item.img}
             />
           ))

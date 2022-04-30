@@ -8,7 +8,7 @@ function Item(props) {
     const onClickButton = () => {
         setCart(true)
     }
-    
+
     return (
         <div className="item">
             <svg onClick={props.onClickHeart} width="32" height="32" className="markedSvg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ function Item(props) {
             <img src={props.img} alt="" />
             <div className="prices d-flex flex-row">
                 <div className="modPrice">
-                    <b className="d-block">{(props.price + props.discount).toFixed(2)} ₽</b>
+                    <b className="d-block">{(props.price - props.discount).toFixed(2)} ₽</b>
                     <span>С картой</span>
                 </div>
                 <div className="classicPrice">
