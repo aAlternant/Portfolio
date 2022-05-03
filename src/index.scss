@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #87CEFA;
+  background-color: #bfdff5;
 }
 
 .wrapper {
@@ -23,6 +23,18 @@ header {
   border-radius: 14px;
   background-color: #FFFFFF;
   max-height: 72px;
+
+  .orange-circle {
+    background: #FF6633;
+    border-radius: 4px;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    font-size: 9px;
+    color:white;
+    margin-left: 38px;
+    text-align: center;
+  }
 
   .userInfo {
     svg {
@@ -40,6 +52,7 @@ header {
     align-items: center;
     padding-left: 30px;
     cursor: pointer;
+
     svg {
       margin-right: 5px;
     }
@@ -60,10 +73,6 @@ header {
         display: block;
         margin: 0 auto;
       }
-
-      // span {
-      //   margin-left: -8px;
-      // }
     }
   }
 }

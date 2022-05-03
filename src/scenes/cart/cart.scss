@@ -16,39 +16,6 @@
         margin-bottom: 68px;
     }
 
-    .incartItem {
-        position: relative;
-        background: #FFFFFF;
-        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        width: 876px;
-        height: 72px;
-        margin-top: 24px;
-
-        p {
-            position: absolute;
-            right: 10px;
-            top: -3px;
-            font-size: 15px;
-
-        }
-
-        h3 {
-            font-weight: 400;
-            font-size: 16px;
-        }
-
-        li {
-            font-size: 12px;
-        }
-
-        img {
-            height: 100%;
-            width: 72px;
-            border-radius: 4px;
-        }
-    }
-
     .countBtn {
         position: absolute;
         background: #70C05B;
@@ -93,26 +60,60 @@
     top: 530px;
     width: 272px;
     height: 430px;
+
     .promotionBlock {
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
-    .mathBlock{
+
+    .mathBlock {
         padding-bottom: 15px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
+
     span {
         color: grayscale($color: #8F8F8F)
     }
+
     .btn {
         background-color: #FF6633;
         margin-top: 8px;
         cursor: pointer;
         border-radius: 4px;
-        border:0;
+        border: 0;
         color: white;
         align-self: center;
         width: 250px;
         height: 60px;
         margin-top: 100px
     }
+}
+
+.emptyCart {
+    margin-top: 30px;
+    margin-right: 400px;
+    button {
+        margin-top: 30px;
+        height: 50px;
+        width: 300px;
+        border: 1px solid orangered;
+        border-radius: 10px;
+        background-color: transparent;
+        font-weight: bold;
+        background-color:transparent;
+        color: orangered;
+        .arrow {
+            position: absolute;
+            left: 570px;
+            margin-top: -5px;
+            width: 40px;
+            height: 25px;
+        }
+        &:hover {
+            .arrow {
+                transform: translateX(-8px);
+            }
+        }
+        cursor: pointer;
+    }
+    
 }

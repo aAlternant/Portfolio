@@ -1,0 +1,41 @@
+.incartItem {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 876px;
+    height: 72px;
+    margin-top: 24px;
+
+    p {
+        position: absolute;
+        right: 10px;
+        top: -3px;
+        font-size: 15px;
+
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 12px;
+    }
+
+    img {
+        height: 100%;
+        width: 72px;
+        border-radius: 4px;
+    }
+
+    .remove-cross {
+        position: absolute;
+        right: 5px;
+        height: 45px;
+        width: 45px;
+        top: 35px;
+        cursor: pointer;
+    }
+}
