@@ -2,14 +2,14 @@ import CartItem from '../../components/cartItem/CartItem'
 import './cart.scss'
 import { Link } from 'react-router-dom'
 
-function Cart({ items, onClickRemove, onClickBack }) {
+function Cart({ items, onClickRemove, onClickBack, makeOrder }) {
   const valueOfItems = () => {
     let basicWord = "товар"
     if (items.length === 0 || items.length >= 5) return basicWord + "ов"
     if (items.length === 1) return basicWord
     if (items.length > 1 && items.length < 5) return basicWord + "a"
   }
-  
+
   const getFullSummary = () => {
     if (items.length > 0) {
       return (
@@ -43,7 +43,7 @@ function Cart({ items, onClickRemove, onClickBack }) {
       return 0
     }
   }
-  
+
 
   return (
     <div className="cart" >
@@ -73,7 +73,7 @@ function Cart({ items, onClickRemove, onClickBack }) {
               <img src="/img/empty-cart-unscreen.gif" alt="Empty Cart" />
               <b>Тут совсем пусто. Думаю стоит что-то добавить!</b>
               <Link to="/">
-                <button onClick = {onClickBack}>
+                <button onClick={onClickBack}>
                   <img src="/img/arrow-in-emptycart.png" className="arrow" alt="Arrow" />
                   Вернуться
                 </button>
@@ -103,7 +103,17 @@ function Cart({ items, onClickRemove, onClickBack }) {
           <span>Итог</span>
           <b style={{ fontSize: 24 }}>{getCurrentFullPrice()} ₽</b>
         </div>
-        <button className="btn">Оформить заказ</button>
+        <button className="btn" onClick={() => {
+          makeOrder({
+            sum: getCurrentFullPrice(),
+            count: items.length,
+            status: "В обработке",
+            year: new Date().getFullYear(),
+            month: new Date().getMonth(),
+            day: new Date().getDate(),
+            items: items
+          })
+        }}>Оформить заказ</button>
       </div>
 
     </div>

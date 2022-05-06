@@ -3,7 +3,11 @@ import ContentLoader from 'react-content-loader';
 // import { useState, useEffect } from 'react'
 // import axios from "axios";
 
-function Main(props) {
+function Main(props) { 
+  const getProcents = (item) => (
+    Math.round(item.discount*100/item.price)
+  )
+
   return (
     <div className="content">
       <h3 className="">{props.searchValue ? `Поиск по запросу "${props.searchValue}"` : 'Акции'}</h3>
@@ -50,6 +54,7 @@ function Main(props) {
               discount={+item.discount}
               img={item.img}
               loading = {props.loading}
+              getProcents = {getProcents(item)}
             />
           ))
         }

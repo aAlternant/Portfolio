@@ -31,10 +31,13 @@ function Item(props) {
                     <img onClick={onAddToFavorite} src='/img/heart.svg' className='markedSvg' alt='NonFavourite' />
             }
             <img src={props.img} alt="Item" />
+            <div className="discount-card">
+                <span><b>-{props.getProcents}%</b></span>
+            </div>
             <div className="prices d-flex flex-row">
                 <div className="modPrice">
                     <b className="d-block">{(props.price - props.discount).toFixed(2)} ₽</b>
-                    <span>С картой</span>
+                    <span>По скидке</span>
                 </div>
                 <div className="classicPrice">
                     <p>{props.price.toFixed(2)} ₽</p>

@@ -1,0 +1,105 @@
+.orders-block {
+  margin-left: 100px;
+  color: #414141;
+
+  h1 {
+    font-size: 64px;
+  }
+
+  b {
+    font-size: 24px;
+  }
+
+  .order {
+    height: 510px;
+    position: relative;
+
+
+    .data {
+      padding-right: 15px;
+
+      .status-bar {
+        background: #F3F2F1;
+        border-radius: 4px;
+        width: 105px;
+        height: 32px;
+        margin-left: 50px;
+        padding-top: 5px;
+        text-align: center;
+      }
+
+      .additional-info {
+        font-size: 24px;
+        margin-left: 540px;
+
+      }
+
+      button {
+        background: #70C05B;
+        border-radius: 4px;
+        width: 200px;
+        height: 40px;
+        margin-left: 35px;
+        position: absolute;
+        top: 37px;
+        border: 0px;
+        font-size: 17px;
+        color: white;
+        padding-left: 28px;
+        cursor: pointer;
+        img {
+          position: absolute;
+          left: 11px;
+          top: 8px
+        }
+      }
+    }
+  }
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition: box-shadow 0.2s ease-in-out, translate 0.2s ease-in-out;
+
+  margin-right: 40px;
+  margin-bottom: 30px;
+
+  width: 272px;
+  height: 349px;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  .rating {
+    margin-top: 30px;
+    width: 210px;
+    height: 16px;
+  }
+
+  img {
+    height: 160px;
+    width: 272px;
+  }
+
+  span {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #BFBFBF;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.item-block {
+  margin-top: 15px;
+  display: flex;
+
+}
