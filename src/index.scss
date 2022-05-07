@@ -31,7 +31,7 @@ header {
     height: 11px;
     position: absolute;
     font-size: 9px;
-    color:white;
+    color: white;
     margin-left: 38px;
     text-align: center;
   }
@@ -79,11 +79,16 @@ header {
 
 .content {
   margin-left: 116px;
-  margin-top: 134px;
+  margin-top: 80px;
 
   .itemBlock {
     width: 1300px;
     flex-wrap: wrap;
+  }
+
+  h2 {
+    font-size: 64px;
+    margin-top: 75px;
   }
 
   h3 {
@@ -136,27 +141,19 @@ code {
     monospace;
 }
 
-.prices {
-  margin-top: 8px;
-  font-family: 'Rubik', sans-serif;
-}
-
-.modPrice {
-  padding-right: 130px;
-  margin-left: 10px;
-}
-
-.starsBlock {
+.links {
   position: absolute;
-  margin-top: 275px;
-  margin-left: 10px
-}
+  top: 340px;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: row;
 
-.classicPrice {
-  margin-left: 10px;
-
-  p {
-    font-weight: 300;
+  li {
+    margin: 10px;
+    margin-left: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -169,4 +166,43 @@ code {
 
 #marked {
   color: orangered
+}
+
+.emptyFavorites {
+  margin-top: 30px;
+  margin-left: 450px;
+  margin-bottom: 100px;
+
+  img {
+    width: 300px;
+    height: 300px;
+  }
+
+  button {
+    margin-top: 30px;
+    height: 50px;
+    width: 300px;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    background-color: transparent;
+    color: orangered;
+
+    .arrow {
+      position: absolute;
+      left: 725px;
+      margin-top: -5px;
+      width: 40px;
+      height: 25px;
+    }
+
+    &:hover {
+      .arrow {
+        transform: translateX(-8px);
+      }
+    }
+
+    cursor: pointer;
+  }
 }

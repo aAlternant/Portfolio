@@ -59,22 +59,16 @@ function Main(props) {
           ))
         }
       </div>
-
-      <h2>Новинки</h2>
-      ...
-      <h2>Покупали раньше</h2>
-      ...
       <div>
         <h2>Специальные предложения</h2>
-        <div className="specialCart">
-          <svg />
-          <h3>Оформите карту "Северяночка"</h3>
-          <p>И получайте бонусы при покупке \n в магазинах и на сайте</p>
+        <div className="d-flex flex-row align-center">
+          <img src="/banners/card-banner1.svg" className="pt-15" alt="Банер" />
+          <img src="/banners/card-banner2.svg" alt="Банер" />
         </div>
       </div>
       <div className="mapsBlock">
         <h2>Наши магазины</h2>
-        <div className="map"></div>
+        <iframe className="mb-15" title="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.631029127511!2d41.354497097980534!3d56.86942259883896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d0bae187a68f1%3A0xdbd781d124e7cc59!2z0J_RgNC-0LTRg9C60YLRiyDQnNCw0LPQsNC30LjQvSDQodC10LLQtdGA0Y_QvdC-0YfQutCw!5e0!3m2!1sru!2sbg!4v1651824753329!5m2!1sru!2sbg" width={1200} height={450} style={{border: 0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   )

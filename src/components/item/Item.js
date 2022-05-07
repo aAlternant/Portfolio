@@ -34,7 +34,7 @@ function Item(props) {
             <div className="discount-card">
                 <span><b>-{props.getProcents}%</b></span>
             </div>
-            <div className="prices d-flex flex-row">
+            <div className="prices d-flex">
                 <div className="modPrice">
                     <b className="d-block">{(props.price - props.discount).toFixed(2)} ₽</b>
                     <span>По скидке</span>
@@ -44,7 +44,7 @@ function Item(props) {
                     <span>Обычная</span>
                 </div>
             </div>
-            <h5 className="ml-15">{props.title}</h5>
+            <h5 className="ml-15 mr-5">{props.title}</h5>
             <div className="starsBlock">
                 <img src="/img/rating.svg" alt="Rating" className="rating" />
             </div>

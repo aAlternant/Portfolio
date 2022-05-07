@@ -1,8 +1,10 @@
 import CartItem from '../../components/cartItem/CartItem'
 import './cart.scss'
+import { Links } from '../../components/Links'
+import { Empty } from '../../components/empty/Empty'
 import { Link } from 'react-router-dom'
 
-function Cart({ items, onClickRemove, onClickBack, makeOrder }) {
+function Cart({ items, onClickRemove, makeOrder }) {
   const valueOfItems = () => {
     let basicWord = "товар"
     if (items.length === 0 || items.length >= 5) return basicWord + "ов"
@@ -47,6 +49,7 @@ function Cart({ items, onClickRemove, onClickBack, makeOrder }) {
 
   return (
     <div className="cart" >
+      <Links title="Корзина" />
       <h2>Корзина</h2>
       <div className="d-flex align-center">
         <img src="/img/checkbox.svg" alt="Checkbox" />
@@ -69,16 +72,11 @@ function Cart({ items, onClickRemove, onClickBack, makeOrder }) {
               />
             ))
             :
-            <div className="emptyCart d-flex flex-column align-center">
-              <img src="/img/empty-cart-unscreen.gif" alt="Empty Cart" />
-              <b>Тут совсем пусто. Думаю стоит что-то добавить!</b>
-              <Link to="/">
-                <button onClick={onClickBack}>
-                  <img src="/img/arrow-in-emptycart.png" className="arrow" alt="Arrow" />
-                  Вернуться
-                </button>
-              </Link>
-            </div>
+            <Empty
+              img={"/img/empty-cart-unscreen.gif"}
+              title="Тут совсем пусто. Думаю стоит что-то добавить!"
+              styleName="emptyCart"
+            />
         }
 
       </div>
@@ -103,17 +101,36 @@ function Cart({ items, onClickRemove, onClickBack, makeOrder }) {
           <span>Итог</span>
           <b style={{ fontSize: 24 }}>{getCurrentFullPrice()} ₽</b>
         </div>
-        <button className="btn" onClick={() => {
-          makeOrder({
-            sum: getCurrentFullPrice(),
-            count: items.length,
-            status: "В обработке",
-            year: new Date().getFullYear(),
-            month: new Date().getMonth(),
-            day: new Date().getDate(),
-            items: items
-          })
-        }}>Оформить заказ</button>
+        {
+          items.length > 0 ?
+            <Link to="/orders">
+              <button className="btn" onClick={() => {
+                makeOrder({
+                  sum: getCurrentFullPrice(),
+                  count: items.length,
+                  status: "В обработке",
+                  year: new Date().getFullYear(),
+                  month: new Date().getMonth(),
+                  day: new Date().getDate(),
+                  items: items
+                })
+              }}>Оформить заказ</button>
+            </Link>
+
+            :
+
+            <button className="btn" onClick={() => {
+              makeOrder({
+                sum: getCurrentFullPrice(),
+                count: items.length,
+                status: "В обработке",
+                year: new Date().getFullYear(),
+                month: new Date().getMonth(),
+                day: new Date().getDate(),
+                items: items
+              })
+            }}>Оформить заказ</button>
+        }
       </div>
 
     </div>

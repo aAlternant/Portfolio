@@ -1,89 +1,115 @@
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    transition: box-shadow 0.2s ease-in-out, translate 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, translate 0.2s ease-in-out;
 
-    margin-right: 40px;
-    margin-bottom: 30px;
+  margin-right: 40px;
+  margin-bottom: 30px;
 
-    width: 272px;
-    height: 349px;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 272px;
+  height: 349px;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  .discount-card {
+    position: absolute;
+    background: #FF6633;
     border-radius: 4px;
-
-    .discount-card {
-      position: absolute;
-      background: #FF6633;
-      border-radius: 4px;
-      height: 32px;
-      width: 56px;
-      margin-top: 120px;
-      margin-left: 10px;
-      text-align: center;
-      padding-top: 5px;
-      span {
-        color: white;
-        font-size: 15px;
-      }
-    }
-
-    .markedSvg {
-      width: 32px;
-      height: 32px;
-      position: absolute;
-      margin-top: 8px;
-      margin-left: 232px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    .rating {
-      width: 210px;
-      height: 16px;
-    }
-
-    img {
-      height: 160px;
-      width: 272px;
-    }
+    height: 32px;
+    width: 56px;
+    margin-top: 120px;
+    margin-left: 10px;
+    text-align: center;
+    padding-top: 5px;
 
     span {
-      font-family: 'Rubik';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 150%;
-      color: #BFBFBF;
-    }
-
-    .disabled-button {
-      pointer-events: none;
-      background-color: #FF6633;
-      position: absolute;
-      margin-top: 300px;
-      cursor: pointer;
-      border-radius: 4px;
-      border: 0;
       color: white;
-      align-self: center;
-      width: 256px;
-      height: 40px;
-    }
-
-    .button {
-      position: absolute;
-      margin-top: 300px;
-      cursor: pointer;
-      border: 1px solid #70C05B;
-      box-sizing: border-box;
-      border-radius: 4px;
-      background-color: white;
-      color: #70C05B;
-      align-self: center;
-      width: 256px;
-      height: 40px;
+      font-size: 15px;
     }
   }
+
+  .markedSvg {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 232px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .rating {
+    width: 210px;
+    height: 16px;
+  }
+
+  img {
+    height: 160px;
+    width: 272px;
+  }
+
+  span {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #BFBFBF;
+  }
+
+  .disabled-button {
+    pointer-events: none;
+    background-color: #FF6633;
+    position: absolute;
+    margin-top: 300px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    color: white;
+    align-self: center;
+    width: 256px;
+    height: 40px;
+  }
+
+  .button {
+    position: absolute;
+    margin-top: 300px;
+    cursor: pointer;
+    border: 1px solid #70C05B;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    color: #70C05B;
+    align-self: center;
+    width: 256px;
+    height: 40px;
+  }
+}
+
+.prices {
+  margin-top: 8px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.modPrice {
+  padding-right: 118px;
+  margin-left: 10px;
+}
+
+.starsBlock {
+  position: absolute;
+  margin-top: 275px;
+  margin-left: 10px
+}
+
+.classicPrice {
+  margin-left: 10px;
+
+  p {
+    font-weight: 300;
+  }
+}
+
