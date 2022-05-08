@@ -47,7 +47,7 @@ function Main(props) {
               isInFavorite = {props.inFavoriteItems.some(obj => obj.title === item.title)}
               isFavorite = {false}
               onAddToFavorite = {() => props.onAddToFavorite(item)}
-              onButtonClick = {props.onButtonClick}
+              onButtonClick = {() => props.onButtonClick(item)}
               key = {item.title}
               title={item.title}
               price={+item.price}

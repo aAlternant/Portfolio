@@ -38,4 +38,51 @@
         top: 35px;
         cursor: pointer;
     }
+
+    .countBtn {
+        position: absolute;
+        background: #70C05B;
+        border-radius: 4px;
+        color: white;
+        left: 640px;
+        top: 15px;
+        width: 100px;
+        height: 40px;
+
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           
+
+        .minus-count {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 15px;
+            margin-top: 0px;
+            .minus-svg {
+                width: 15px;
+                height: 3px;
+            }
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        span {
+            position: absolute;
+            margin-left: 0px;
+        }
+        
+        .plus-count {
+            cursor: pointer;
+            position: absolute;
+            right: 9px
+        }
+    }
 }

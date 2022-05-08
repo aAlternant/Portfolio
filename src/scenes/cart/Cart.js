@@ -4,7 +4,8 @@ import { Links } from '../../components/Links'
 import { Empty } from '../../components/empty/Empty'
 import { Link } from 'react-router-dom'
 
-function Cart({ items, onClickRemove, makeOrder }) {
+function Cart({ items, onClickRemove, makeOrder, setCount }) {
+  
   const valueOfItems = () => {
     let basicWord = "товар"
     if (items.length === 0 || items.length >= 5) return basicWord + "ов"
@@ -16,7 +17,7 @@ function Cart({ items, onClickRemove, makeOrder }) {
     if (items.length > 0) {
       return (
         items.reduce((accum, current) => (
-          accum + current.price
+          accum + current.price * (current.count ?? 1)
         ), 0).toFixed(2)
       )
     } else {
@@ -28,7 +29,7 @@ function Cart({ items, onClickRemove, makeOrder }) {
     if (items.length > 0) {
       return (
         items.reduce((accum, current) => (
-          accum + current.discount
+          accum + current.discount * (current.count ?? 1)
         ), 0).toFixed(2)
       )
     } else {
@@ -69,11 +70,15 @@ function Cart({ items, onClickRemove, makeOrder }) {
                 price={item.price}
                 title={item.title}
                 onClickRemove={() => onClickRemove(item.id)}
+                discount = {item.discount}
+                setCountPlus = {() => setCount(item, true)}
+                setCountMinus = {() => setCount(item, false)}
+                count = {item.count}
               />
             ))
             :
             <Empty
-              img={"/img/empty-cart-unscreen.gif"}
+              img="/img/empty-cart-unscreen.gif"
               title="Тут совсем пусто. Думаю стоит что-то добавить!"
               styleName="emptyCart"
             />

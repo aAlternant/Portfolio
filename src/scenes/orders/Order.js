@@ -1,7 +1,7 @@
 import "./orders.scss"
 import { OrderItem } from "./OrderItem"
 
-export function Order({ id, sum, count, status, day, month, year, orderItems }) {
+export function Order({ id, sum, status, day, month, year, orderItems }) {
     return (
         <div className="order">
             <h3>Заказ №{id}</h3>
@@ -12,7 +12,7 @@ export function Order({ id, sum, count, status, day, month, year, orderItems }) 
                     {status}
                 </div>
                 <div className="additional-info">
-                    <span>{sum} ₴</span>
+                    <span>{sum} ₽</span>
                     <button>
                         <img src="/img/refresh-cw.svg" alt="refresh" />
                         Повторить заказ
@@ -22,6 +22,7 @@ export function Order({ id, sum, count, status, day, month, year, orderItems }) 
             <div className="item-block">
                 {orderItems.map(item => (
                     <OrderItem
+                        count = {item.count}
                         title={item.title}
                         price={item.price - item.discount}
                         img={item.img}

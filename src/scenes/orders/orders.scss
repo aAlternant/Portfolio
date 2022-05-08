@@ -16,6 +16,10 @@
     margin-top: 70px;
     position: absolute;
     right: 200px;
+    border: 1px solid #70C05B;
+    background-color: white;
+    border-radius: 8px;
+    color: green;
   }
 
   b {
@@ -145,5 +149,13 @@
     }
 
     cursor: pointer;
+  }
+}
+
+.count {
+  margin-left: 100px;
+  p {
+    margin-left: 40px;
+    font-weight: 300;
   }
 }

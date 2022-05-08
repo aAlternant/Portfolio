@@ -7,7 +7,7 @@ function Item(props) {
     const [isFavorite, setFavorite] = useState(false)
 
     const onClickButton = () => {
-        props.onButtonClick(props);
+        props.onButtonClick();
         setCart(true)
     }
 

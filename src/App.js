@@ -106,6 +106,13 @@ function App() {
     }
   }
 
+  const setCount = (item, value) => {
+    let list = inCartItems.slice()
+    let target = list.find(obj => obj.title === item.title)
+    value ? target.count++ : target.count--
+    setCartItems(list)
+  }
+
   const clearOrders = async () => {
     for (let i = 1; i < orderList.length+1; i++) {
       await axios.delete(backUrl + `/orders/${i}`)
@@ -128,7 +135,8 @@ function App() {
 
             onClickRemove={removeItem}
             items={inCartItems}
-            makeOrder={makeOrder}
+            makeOrder = {makeOrder}
+            setCount = {setCount}
 
           />
         </Route>
